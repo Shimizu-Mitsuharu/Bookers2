@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
-  get 'users/show'
+  root 'layouts#home'
+  get 'layouts/about' => 'home/about'
   devise_for :users, controllers: {
         registrations: 'users/registrations'
 }
