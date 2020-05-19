@@ -16,3 +16,93 @@
 // -- bootstrap import
 @import "bootstrap-sprockets";
 @import "bootstrap";
+
+
+
+.img-circle{
+	border-radius:0;
+}
+*{
+	margin:0;
+	padding:0;
+}
+div{
+	margin:0;
+}
+
+body{
+	width:100%;
+}
+
+
+.width{
+	width:80%;
+}
+.table{
+	width:100%;
+}
+.header{
+	background-color:#000;
+	height: 50px;
+	color:#fff;
+	margin: 0 ;
+	padding: 0 ;
+}
+
+.bookers{
+	padding:0 10px;
+	margin:0;
+	font-size:20px;
+	text-align:left;
+}
+.ul-top{
+	float:right;
+}
+.header ul li{
+	display: inline-block;
+	color:#fff;
+	margin : 0 10px;
+}
+.btn-top{
+	text-align:center;
+	margin:0;
+}
+.btn-top a{
+	color:#fff;
+	display: block;
+}
+.btn-group-vertical{
+	width:80%;
+
+	text-align:center;
+}
+
+.form_create{
+	width:90%;
+	margin:30px;
+}
+.before{
+	margin-top:10px;
+}
+
+.header a{
+	color: #FFF;
+	margin:0;
+	padding:0;
+	text-decoration: none;
+}
+.bookimage{
+	width:40px;
+	margin-right:100%;
+}
+.edit{
+	width:100%;
+	margin:30px;
+}
+.clear_fix{
+	clear:both;
+}
+.flash{
+	color:limegreen;
+	margin:10px 30px;
+}
