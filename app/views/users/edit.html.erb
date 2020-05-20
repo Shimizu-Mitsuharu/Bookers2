@@ -9,7 +9,9 @@
 			<label>Name</label><br>
 			<%= f.text_field :name, class: "name width"%><br>
 			<label>Image</label><br>
-			<%= attachment_image_tag @user, :profileimage, :fill, 100, 100, fallback: "no_image.jpg" ,format: 'no_image.jpg' %><br>
+			<%= form_for @user do |form| %>
+			<%= form.attachment_field :profile_image %>
+			<% end %>
 			<label>Introduction</label><br>
 			<%= f.text_area :profile, class: "introduction width clear_fix" %><br>
 
