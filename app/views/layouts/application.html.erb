@@ -4,45 +4,47 @@
   <title>Bookers2</title>
   <%= csrf_meta_tags %>
   <%= csp_meta_tag %>
-
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
 </head>
-
 <body>
-  <div class="header">
-    <h2 class="bookers">Bookers</h2>
-    <ul class="ul-top">
-      <% if user_signed_in? %>
-      <li><%= link_to "Home", "/users", class: "glyphicon glyphicon-home home" %>
-      </li>
-      <li><%= link_to "Users", "/users" , class: "glyphicon glyphicon-user users" %>
-      </li>
-      <li><%= link_to "Books", "/books", class: "glyphicon glyphicon-book books" %>
-      </li>
-      <li><%= link_to "logout", destroy_user_session_path, method: :delete, class: "glyphicon glyphicon-log-out logout" %>
-      </li>
-      <% else %>
-      <li><%= link_to "Home", root_path , class: "glyphicon glyphicon-home home" %>
-      </li>
-      <li><%= link_to "About", layouts_about_path , class: "glyphicon glyphicon-paperclip about" %>
-      </li>
-      <li><%= link_to "sign up", new_user_registration_path , class: "glyphicon glyphicon-edit sign_up" %>
-      </li>
-      <li><%= link_to "login", new_user_session_path , class: "glyphicon glyphicon-new-window sign_in" %>
-      </li>
-      <% end %>
-    </ul>
-  </div>
-  <div class="clear_fix"></div>
-  <% if flash[:notice]%>
-  <div class="flash">
-    <%= flash[:notice]%>
-  </div>
-  <%end%>
-  <%= yield %>
-</body>
 
+  <header class="navbar navbar-fixed-top navbar-inverse">
+    <div class="container">
+      <nav class="nav navbar-nav navbar-left">
+        <span class="title" style="color:#ffffff;">Bookers</span>
+      </nav>
+      <nav>
+        <ul class="nav navbar-nav navbar-right">
+          <!--if文でサインインとアウト時の表示を変更-->
+          <% if user_signed_in? %>
+          <li><%= link_to "Home", user_path(current_user.id),class:"glyphicon glyphicon-home" %></a></li>
+          <li><%= link_to "Users", "/users",class:"glyphicon glyphicon-user" %></a></li>
+          <li><%= link_to "Books", "/books",class:"glyphicon glyphicon-book" %></a></li>
+          <li><%= link_to "log out", destroy_user_session_path,class:" glyphicon  glyphicon-log-out",method: :delete %></li>
+
+          <% else %>
+          <li><%= link_to"Home",root_path,  class:"glyphicon glyphicon-home" %></li>
+          <li><%= link_to"About",layouts_about_path,class:"glyphicon glyphicon-link" %></li>
+          <li><%= link_to"Sign up", "/users/sign_up",class:"glyphicon glyphicon-edit sign_up" %></li>
+          <li><%= link_to"login", "/users/sign_in",  class:"glyphicon glyphicon-log-in" %></li>
+          <% end %>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <div class="container">
+    <p id="notice"><%= notice %></p>
+    <p class="alert"><%= alert %></p>
+  </div>
+
+  <main>
+    <div class="container">
+      <%= yield %>
+    </div>
+  </main>
+</body>
 
 <footer>
   <div class='container'>
@@ -53,4 +55,5 @@
     </div>
   </div>
 </footer>
+
 </html>

@@ -1,104 +1,43 @@
 /*
- * This is a manifest file that'll be compiled into application.css, which will include all the files
- * listed below.
- *
- * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
- * vendor/assets/stylesheets directory can be referenced here using a relative path.
- *
- * You're free to add application-wide styles to this file and they'll appear at the bottom of the
- * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
- * files in this directory. Styles in this file should be added after the last require_* statement.
- * It is generally better to create a new file per style scope.
- *
- *= require_tree .
- *= require_self
- */
+* This is a manifest file that'll be compiled into application.css, which will include all the files
+* listed below.
+*
+* Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+* vendor/assets/stylesheets directory can be referenced here using a relative path.
+*
+* You're free to add application-wide styles to this file and they'll appear at the bottom of the
+* compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+* files in this directory. Styles in this file should be added after the last require_* statement.
+* It is generally better to create a new file per style scope.
+*
+*= require_tree .
+*= require_self
+*/
 // -- bootstrap import
 @import "bootstrap-sprockets";
 @import "bootstrap";
 
-*{
-	margin:0;
-	padding:0;
+span {
+font-size: 20px;
+padding-top: 10px;
 }
 
-.img-circle{
-	border-radius:0;
+.notice {
+background-color: green;
+color: #ffffff;
+text-align: center;
 }
 
-body{
-	width:100%;
+.alert {
+background-color: red;
+color: #ffffff;
+text-align: center;
 }
 
-.table{
-	width:100%;
-}
-
-.header{
-	background-color:#000;
-	height: 50px;
-	color:#fff;
-	margin: 0 ;
-	padding: 0 ;
-}
-
-.bookers{
-	padding:0 10px;
-	margin:0;
-	font-size:20px;
-}
-
-.ul-top{
-	float:right;
-}
-
-.header ul li{
-	display: inline-block;
-	color:#fff;
-	margin : 0 10px;
-}
-
-.btn-top{
-	text-align:center;
-	margin:0;
-}
-
-.btn-top a{
-	color:#fff;
-	display: block;
-}
-
-.btn-group-vertical{
-	width:80%;
-	text-align:center;
-}
-
-.form_create{
-	width:90%;
-	margin:30px;
-}
-.before{
-	margin-top:10px;
-}
-
-.header a{
-	color: #FFF;
-	margin:0;
-	padding:0;
-	text-decoration: none;
-}
-.bookimage{
-	width:40px;
-	margin-right:100%;
-}
-.edit{
-	width:100%;
-	margin:30px;
-}
-.clear_fix{
-	clear:both;
-}
-.flash{
-	color:limegreen;
-	margin:10px 30px;
+.glyphicon {
+position: relative;
+top: 1px;
+display: inline-block;
+font-family: 'Glyphicons Halflings';
+font-style: normal;
 }
