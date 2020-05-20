@@ -14,7 +14,7 @@
     <h2 class="bookers">Bookers</h2>
     <ul class="ul-top">
       <% if user_signed_in? %>
-      <li><%= link_to "Home",   , class: "glyphicon glyphicon-home home" %>
+      <li><%= link_to "Home", "/users", class: "glyphicon glyphicon-home home" %>
       </li>
       <li><%= link_to "Users", "/users" , class: "glyphicon glyphicon-user users" %>
       </li>
@@ -42,6 +42,8 @@
   <%end%>
   <%= yield %>
 </body>
+
+
 <footer>
   <div class='container'>
     <div class='row'>
