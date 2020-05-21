@@ -18,7 +18,7 @@
         <ul class="nav navbar-nav navbar-right">
           <!--if文でサインインとアウト時の表示を変更-->
           <% if user_signed_in? %>
-          <li><%= link_to "Home", user_path(current_user.id),class:"glyphicon glyphicon-home" %></a></li>
+          <li><%= link_to "Home","/users",class:"glyphicon glyphicon-home" %></a></li>
           <li><%= link_to "Users", "/users",class:"glyphicon glyphicon-user" %></a></li>
           <li><%= link_to "Books", "/books",class:"glyphicon glyphicon-book" %></a></li>
           <li><%= link_to "log out", destroy_user_session_path,class:" glyphicon  glyphicon-log-out",method: :delete %></li>
