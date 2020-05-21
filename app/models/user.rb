@@ -4,7 +4,7 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
   has_many  :books, dependent: :destroy
-  validates :name, presence: true,length: {in: 2..20} #追記
-  validates :profile, length: { maximum: 50 } #追記
-  attachment :profile_image
+  validates :name, length: { maximum: 20, minimum: 2 }
+  validates :introduction, length: { maximum: 50 }
+  attachment :profile_image, destroy: false
 end

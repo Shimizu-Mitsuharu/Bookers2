@@ -2,8 +2,8 @@
 
 one:
   title: MyString
-  Opinion: MyText
+  body: MyText
 
 two:
   title: MyString
-  Opinion: MyText
+  body: MyText

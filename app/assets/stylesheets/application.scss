@@ -17,15 +17,34 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
 
-span {
-font-size: 20px;
-padding-top: 10px;
+
+header {
+	color:white;
 }
 
-.glyphicon {
-position: relative;
-top: 1px;
-display: inline-block;
-font-family: 'Glyphicons Halflings';
-font-style: normal;
+header .navbar-left span {
+	font-size: 20px;
+	padding-top: 10px;
+}
+
+body {
+	margin-top: 60px;
+}
+
+.actions {
+	margin-top:10px;
+}
+
+#book_list {
+	.edit_book {
+		display: none;
+	}
+	.destroy_book {
+		display: none;
+	}
+}
+#book_list_user {
+	.user_name {
+		display: none;
+	}
 }
