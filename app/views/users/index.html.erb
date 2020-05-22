@@ -8,7 +8,6 @@
   </div>
 
   <div class="col-xs-9">
-    <%# アクションが #index なら "Users" それ以外は "アクション名" %>
     <h2><%= params[:action] == "index" ? "Users" : params[:action] %></h2>
 
     <%= render 'users/list', users: @users %>
