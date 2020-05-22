@@ -8,9 +8,9 @@
   </thead>
 
   <tbody>
-    <% users.each do |user| %>
+    <% @users.each do |user| %>
     <tr>
-      <td><%= attachment_image_tag( @user, :profile_image, :fill, 80, 80, fallback: "no-image-mini.jpg") %></td>
+      <td><%= attachment_image_tag( @user, :profile_image, :fill, 40, 40, fallback: "no-image-mini.jpg",size:'40x40') %></td>
       <td><%= user.name%></td>
       <td><%= link_to "Show", user, class: "user_#{user.id}" %></td>
     </tr>

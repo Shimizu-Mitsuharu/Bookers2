@@ -1,23 +1,32 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>Bookers2</title>
-    <%= csrf_meta_tags %>
-    <%= csp_meta_tag %>
+<head>
+  <title>Bookers2</title>
+  <%= csrf_meta_tags %>
+  <%= csp_meta_tag %>
 
-    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
-  </head>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+</head>
 
-  <body>
+<body>
 
-    <%= render 'layouts/navbar' %>
+  <%= render 'layouts/navbar' %>
 
-    <div class="container">
-      <%= render 'layouts/notice' %>
-      <%= yield %>
+  <div class="container">
+    <%= render 'layouts/notice' %>
+    <%= yield %>
+  </div>
+
+</body>
+<footer>
+  <div class='container'>
+    <div class='row'>
+      <div class='col-xs-3 col-xs-offset-9'>
+        <p>CopyRight Infratop.inc</p>
+      </div>
     </div>
+  </div>
+</footer>
 
-    <%= debug(params) if Rails.env.development? %>
-  </body>
 </html>

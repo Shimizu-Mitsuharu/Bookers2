@@ -1,6 +1,6 @@
 <td>
 	<%= link_to(book.user) do %>
-	<%= attachment_image_tag(book.user, :profile_image, :fill, 80, 80, fallback: "no_image.jpg") %><br>
+	<%= attachment_image_tag(book.user, :profile_image, :fill, 40, 40, fallback: "no_image.jpg",size:'40x40') %><br>
 	<span class="user_name"><%= book.user.name %></span>
 	<% end %>
 </td>
