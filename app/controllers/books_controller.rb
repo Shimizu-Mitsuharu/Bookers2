@@ -33,7 +33,7 @@ end
 def update
   @book = Book.find(params[:id])
   if @book.update(book_params)
-    flash[:success] = "successfully updated book!"
+    flash[:success] = "You have updated book successfully."
     redirect_to @book
   else
     flash.now[:danger] = @book.errors
