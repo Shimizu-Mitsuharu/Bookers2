@@ -53,3 +53,10 @@ private
 def book_params
   params.require(:book).permit(:title, :body)
 end
+def ensure_correct_user
+  @book = Book.find(params[:id])
+  return if @book.user_id == current_user.id
+  flash[:danger] = '権限がありません'
+  redirect_to books_path
+end
+end
